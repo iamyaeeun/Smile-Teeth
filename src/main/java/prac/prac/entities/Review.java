@@ -23,10 +23,6 @@ public class Review {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToOne(fetch = LAZY)
-    @JoinColumn(name = "hospital_id")
-    private Hospital hospital;
-
     @Column(nullable = false)
     private int totalScore;
 
@@ -37,8 +33,7 @@ public class Review {
     @Column(nullable = false)
     private Long payment;
 
-    public Review(User user, Hospital hospital){
+    public Review(User user){
         this.user = user;
-        this.hospital = hospital;
     }
 }

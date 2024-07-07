@@ -22,9 +22,16 @@ public enum BaseResponseStatus {
 
     USERS_NOT_FOUND_EMAIL(true,2010,"가입 가능한 이메일입니다."),
     USERS_EXISTS_EMAIL(false,2011,"이미 존재하는 메일 주소입니다."),
+
+    USERS_NOT_EXISTS(false,2012,"회원 정보가 존재하지 않습니다."),
+    UNABLE_TO_SEND_EMAIL(false, 2020, "이메일을 발송하지 못했습니다."),
+    ERR_MAKE_CODE(false, 2021, "인증 코드 생성에 오류가 있습니다."),
+    INCORRECT_CODE(false, 2022, "인증 코드가 일치하지 않습니다."),
+
     EMPTY_INFORMATION(false, 2050, "요청값이 존재하지 않습니다."),
     CANNOT_FIND_INFORMATION(false, 2051, "해당 항목이 존재하지 않습니다."),
-    USERS_NOT_EXISTS(false,2012,"회원 정보가 존재하지 않습니다.");
+    ;
+
 
     private final boolean isSuccess;
     private final int code;
